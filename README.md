@@ -1,10 +1,10 @@
 # Frontend Elnazir - React Blog UI
 
-A pixel-perfect blog interface built with React, featuring responsive design, functional navigation, and modern UI patterns. This project demonstrates advanced frontend development with strict adherence to Figma specifications.
+A pixel-perfect blog interface built with React and Vite, featuring responsive design, functional navigation, and modern UI patterns. This project demonstrates advanced frontend development with strict adherence to Figma specifications and robust modal scroll management.
 
 ## 🚀 Overview
 
-This project is a comprehensive React blog application that showcases modern frontend development practices. Built with Create React App, it features a clean white aesthetic, functional navigation with dropdowns, search functionality, and responsive post grid layout. The application is optimized for both desktop and mobile experiences with smooth animations and professional styling.
+This project is a comprehensive React blog application that showcases modern frontend development practices. Built with Vite for optimal performance, it features a clean white aesthetic, functional navigation with dropdowns, search functionality, and responsive post grid layout. The application is optimized for both desktop and mobile experiences with smooth animations, professional styling, and robust modal scroll management.
 
 ## ✨ Core Features
 
@@ -40,6 +40,8 @@ This project is a comprehensive React blog application that showcases modern fro
 - **Smart Content**: Video, gallery, and text post detection
 - **Share Functionality**: Built-in share buttons with hover effects
 - **Accessibility**: Proper ARIA labels and keyboard navigation
+- **Scroll Management**: Robust scroll restoration and scrollbar prevention
+- **Figma Compliance**: Pure white background, black text, proper color palette
 
 ### 6. Performance Optimizations
 - **Lazy Loading**: Images load as needed for better performance
@@ -51,7 +53,7 @@ This project is a comprehensive React blog application that showcases modern fro
 
 ### Core Technologies
 - **React 18**: Modern React with functional components and hooks
-- **Create React App**: Optimized build configuration and development environment
+- **Vite**: Fast build tool with optimized development experience and production builds
 - **CSS3**: Custom CSS with modern features (flexbox, grid, custom properties)
 - **JavaScript ES6+**: Modern JavaScript with async/await and destructuring
 
@@ -82,7 +84,7 @@ npm install
 
 ### Development Server
 ```bash
-npm start
+npm run dev
 ```
 Opens the development server at `http://localhost:3000`
 
@@ -90,11 +92,11 @@ Opens the development server at `http://localhost:3000`
 ```bash
 npm run build
 ```
-Creates an optimized production bundle in the `build/` directory
+Creates an optimized production bundle in the `dist/` directory
 
 ### Preview Production Build
 ```bash
-serve -s build
+npm run preview
 ```
 Serves the production build locally for testing
 
@@ -121,7 +123,7 @@ src/
 │   └── textUtils.js         # Text processing utilities
 ├── App.jsx                  # Main application component
 ├── index.css                # Global styles
-└── index.js                 # Application entry point
+└── index.jsx                # Application entry point
 ```
 
 ## 🎯 Key Technical Implementations
@@ -172,7 +174,7 @@ This project is optimized for Vercel deployment:
 ### Automatic Deployment
 1. Push your code to GitHub
 2. Connect your repository to Vercel
-3. Vercel will automatically detect it's a Create React App
+3. Vercel will automatically detect it's a Vite project
 4. Deploy with one click
 
 ### Manual Deployment
@@ -187,21 +189,22 @@ vercel --prod
 ### Environment Variables (if needed)
 Create a `.env.local` file for development:
 ```bash
-REACT_APP_API_URL=https://your-api-endpoint.com
+VITE_API_URL=https://your-api-endpoint.com
 ```
 
 ### Deployment Configuration
 The project includes:
-- **vercel.json** (optional): Custom deployment settings
-- **build/** folder: Optimized production bundle
+- **vercel.json**: Custom deployment settings with distDir: "dist"
+- **dist/** folder: Optimized production bundle
 - **Static assets**: Properly served and cached
 
 ## 📦 Build Optimization
 
-- **Bundle Size**: ~64KB (gzipped) for optimal loading
+- **Bundle Size**: ~158KB (gzipped) for optimal loading
 - **Code Splitting**: Automatic splitting for better performance
 - **Asset Optimization**: Images and CSS minified
 - **Tree Shaking**: Unused code automatically removed
+- **Fast Builds**: Vite's optimized bundling for faster development and production builds
 
 ## 🤝 Contributing
 
@@ -217,4 +220,4 @@ This project is part of a technical challenge assessment.
 
 ---
 
-**Built with ❤️ using React, Create React App, and modern web standards**
+**Built with ❤️ using React, Vite, and modern web standards**
