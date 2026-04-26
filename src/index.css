@@ -18,6 +18,11 @@ html {
 }
 
 /* CSS RESET & GLOBAL TYPOGRAPHY */
+
+/* Modal scroll prevention safeguard */
+body:not(.modal-open) {
+  overflow: auto !important;
+}
 * {
 	margin: 0;
 	padding: 0;

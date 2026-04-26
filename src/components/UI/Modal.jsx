@@ -53,8 +53,10 @@ export default function Modal({
 	// Prevent body scroll when modal is open
 	React.useEffect(() => {
 		document.body.style.overflow = 'hidden';
+		document.body.style.paddingRight = '0px'; // Prevents layout shift
 		return () => {
-			document.body.style.overflow = 'unset';
+			document.body.style.overflow = 'auto';
+			document.body.style.paddingRight = '';
 		};
 	}, []);
 
