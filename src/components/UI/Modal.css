@@ -12,10 +12,10 @@
 	transition: opacity 0.2s;
 }
 .modal-content {
-	background: #232323;
+	background: #FFFFFF;
 	color: #fff;
 	border-radius: 16px;
-	box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+	box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 	max-width: 540px;
 	width: 90vw;
 	max-height: 80vh;
@@ -28,13 +28,14 @@
 	margin-bottom: 1.5rem;
 	font-size: 2rem;
 	font-weight: 700;
+	color: #000000;
 }
 .modal-meta {
 	display: flex;
 	gap: 1rem;
 	margin-bottom: 1.5rem;
 	font-size: 0.9rem;
-	color: #bbb;
+	color: #666666;
 }
 
 .modal-author {
@@ -48,7 +49,7 @@
 .modal-text {
 	font-size: 1.1rem;
 	line-height: 1.7;
-	color: #eee;
+	color: #333333;
 	max-height: 50vh;
 	overflow-y: auto;
 	padding-right: 0.5rem;
@@ -72,7 +73,7 @@
 	right: 1.5rem;
 	background: none;
 	border: none;
-	color: #fff;
+	color: #000000;
 	font-size: 2rem;
 	cursor: pointer;
 	z-index: 10;
@@ -212,6 +213,7 @@
 	.modal-share-btn svg {
 		width: 18px;
 		height: 18px;
+		color: #333333;
 	}
 }
 
@@ -266,10 +268,11 @@
 	margin-top: 2rem;
 	padding-top: 1.5rem;
 	border-top: 1px solid rgba(255,255,255,0.1);
+	background: #FFFFFF;
 }
 
 .modal-share-label {
-	color: #999;
+	color: #000000;
 	font-size: 0.9rem;
 	margin-bottom: 0.75rem;
 	display: block;
@@ -281,7 +284,7 @@
 }
 
 .modal-share-btn {
-	background: rgba(255,255,255,0.05);
+	background: #FFFFFF;
 	border: 1px solid rgba(255,255,255,0.1);
 	border-radius: 6px;
 	padding: 0.5rem;
