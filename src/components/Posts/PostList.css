@@ -1,0 +1,92 @@
+
+.post-list__wrapper {
+	margin-top: 3rem;
+	width: 100%;
+	max-width: 75rem;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 1rem;
+}
+
+.post-list__search-container {
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 2rem;
+	opacity: 0;
+	max-height: 0;
+	overflow: hidden;
+	transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.post-list__search-container--visible {
+	opacity: 1;
+	max-height: 60px;
+}
+
+.post-list__search {
+	padding: 0.75rem 1rem;
+	border: 1px solid #e5e5e5;
+	border-radius: 8px;
+	font-size: 0.9rem;
+	width: 300px;
+	transition: border-color 0.2s ease;
+}
+
+.post-list__search:focus {
+	outline: none;
+	border-color: #FF0000;
+}
+
+
+.post-list__loading,
+.post-list__error,
+.post-list__empty {
+	text-align: center;
+	margin: 2rem 0;
+	color: #888;
+	font-size: 1.1rem;
+}
+
+.post-list__empty {
+	padding: 3rem 1rem;
+	background: #1a1a1a;
+	border-radius: 8px;
+	border: 1px dashed #333;
+}
+
+.post-list__grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px; /* desktop: explicit px gap per spec */
+}
+
+.post-list__grid .post-card {
+	flex: 0 0 calc(33.333% - 16px); /* 3-column layout accounting for gaps */
+}
+
+/* PostCard is now used for cards, see PostCard.css for card styles */
+
+/* Tablet: 768px - 1199px */
+@media (max-width: 1199px) {
+	.post-list__grid {
+		gap: 20px; /* tablet gap */
+	}
+	.post-list__grid .post-card {
+		flex: 0 0 calc(50% - 10px); /* 2-column layout for tablets */
+	}
+}
+
+/* Mobile: below 767px */
+@media (max-width: 767px) {
+	.post-list__grid {
+		gap: 16px; /* mobile gap */
+	}
+	.post-list__grid .post-card {
+		flex: 0 0 100%; /* 1-column layout for mobile */
+	}
+	
+	/* Reduce container padding on mobile to maximize screen usage */
+	.post-list__wrapper {
+		padding: 0 1rem;
+	}
+}

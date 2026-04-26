@@ -1,0 +1,305 @@
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0,0,0,0.6);
+	z-index: 2000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: opacity 0.2s;
+}
+.modal-content {
+	background: #232323;
+	color: #fff;
+	border-radius: 16px;
+	box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+	max-width: 540px;
+	width: 90vw;
+	max-height: 80vh;
+	padding: 2.5rem 2rem 2rem 2rem;
+	position: relative;
+	overflow: auto;
+}
+.modal-title {
+	margin-top: 0;
+	margin-bottom: 1.5rem;
+	font-size: 2rem;
+	font-weight: 700;
+}
+.modal-meta {
+	display: flex;
+	gap: 1rem;
+	margin-bottom: 1.5rem;
+	font-size: 0.9rem;
+	color: #bbb;
+}
+
+.modal-author {
+	font-weight: 500;
+}
+
+.modal-date {
+	opacity: 0.8;
+}
+
+.modal-text {
+	font-size: 1.1rem;
+	line-height: 1.7;
+	color: #eee;
+	max-height: 50vh;
+	overflow-y: auto;
+	padding-right: 0.5rem;
+}
+
+/* Modal Size Variants */
+.modal--small {
+	max-width: 400px;
+}
+
+.modal--medium {
+	max-width: 540px;
+}
+
+.modal--large {
+	max-width: 800px;
+}
+.modal-close {
+	position: absolute;
+	top: 1.2rem;
+	right: 1.5rem;
+	background: none;
+	border: none;
+	color: #fff;
+	font-size: 2rem;
+	cursor: pointer;
+	z-index: 10;
+	opacity: 0.7;
+	transition: opacity 0.2s;
+	min-width: 44px; /* Minimum touch target */
+	min-height: 44px;
+	padding: 0.5rem;
+}
+.modal-close:hover {
+	opacity: 1;
+}
+
+/* Custom scrollbar for all modal content - #1A1A1A signature scrollbar */
+.modal-content::-webkit-scrollbar {
+	width: 6px;
+}
+.modal-content::-webkit-scrollbar-track {
+	background: #1A1A1A;
+	border-radius: 9999px;
+}
+.modal-content::-webkit-scrollbar-thumb {
+	background: #4A4A4A;
+	border-radius: 9999px;
+}
+.modal-content {
+	scrollbar-width: thin;
+	scrollbar-color: #4A4A4A #1A1A1A;
+}
+
+.modal-text::-webkit-scrollbar {
+	width: 6px;
+}
+.modal-text::-webkit-scrollbar-track {
+	background: #1A1A1A;
+	border-radius: 9999px;
+}
+.modal-text::-webkit-scrollbar-thumb {
+	background: #4A4A4A;
+	border-radius: 9999px;
+}
+.modal-text {
+	scrollbar-width: thin;
+	scrollbar-color: #4A4A4A #1A1A1A;
+}
+
+/* Mobile Responsive Modal */
+@media (max-width: 767px) {
+	.modal-content {
+		width: 95vw; /* Almost full width on small screens */
+		max-width: none;
+		max-height: 90vh; /* More height on mobile */
+		padding: 2rem 1.5rem 1.5rem 1.5rem;
+		border-radius: 12px; /* Slightly smaller radius on mobile */
+	}
+	
+	.modal-title {
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+		padding-right: 3rem; /* Space for close button */
+	}
+	
+	.modal-meta {
+		font-size: 0.8rem;
+		margin-bottom: 1rem;
+		flex-wrap: wrap;
+	}
+	
+	.modal-text {
+		font-size: 1rem;
+		max-height: 60vh; /* Allow more text space */
+		padding-right: 0.25rem;
+	}
+	
+	.modal-close {
+		top: 1rem;
+		right: 1rem;
+		font-size: 1.75rem;
+		min-width: 44px;
+		min-height: 44px;
+	}
+}
+
+@media (max-width: 480px) {
+	.modal-content {
+		width: 95vw;
+		padding: 1.5rem 1rem 1rem 1rem;
+	}
+	
+	.modal-title {
+		font-size: 1.25rem;
+		padding-right: 2.5rem;
+	}
+	
+	.modal-meta {
+		font-size: 0.75rem;
+	}
+	
+	.modal-text {
+		font-size: 0.95rem;
+	}
+	
+	/* Responsive Video and Gallery */
+	.modal-video-placeholder {
+		font-size: 1rem;
+	}
+	
+	.modal-gallery-grid {
+		gap: 0.75rem;
+	}
+	
+	.modal-gallery-placeholder {
+		font-size: 0.8rem;
+	}
+	
+	/* Responsive Share Buttons */
+	.modal-share {
+		margin-top: 1.5rem;
+		padding-top: 1rem;
+	}
+	
+	.modal-share-label {
+		font-size: 0.8rem;
+		margin-bottom: 0.5rem;
+	}
+	
+	.modal-share-buttons {
+		gap: 0.5rem;
+	}
+	
+	.modal-share-btn {
+		padding: 0.4rem;
+		min-width: 40px;
+		min-height: 40px;
+	}
+	
+	.modal-share-btn svg {
+		width: 18px;
+		height: 18px;
+	}
+}
+
+/* Video Content Styling */
+.modal-video {
+	margin: 1.5rem 0;
+}
+
+.modal-video-placeholder {
+	background: #1a1a1a;
+	border-radius: 8px;
+	aspect-ratio: 16/9;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #666;
+	font-size: 1.1rem;
+	font-weight: 500;
+	border: 2px dashed #333;
+}
+
+/* Gallery Content Styling */
+.modal-gallery {
+	margin: 1.5rem 0;
+}
+
+.modal-gallery-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1rem;
+}
+
+.modal-gallery-item {
+	aspect-ratio: 1;
+}
+
+.modal-gallery-placeholder {
+	background: #1a1a1a;
+	border-radius: 8px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #666;
+	font-size: 0.9rem;
+	font-weight: 500;
+	border: 2px dashed #333;
+}
+
+/* Share Buttons Styling */
+.modal-share {
+	margin-top: 2rem;
+	padding-top: 1.5rem;
+	border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.modal-share-label {
+	color: #999;
+	font-size: 0.9rem;
+	margin-bottom: 0.75rem;
+	display: block;
+}
+
+.modal-share-buttons {
+	display: flex;
+	gap: 0.75rem;
+}
+
+.modal-share-btn {
+	background: rgba(255,255,255,0.05);
+	border: 1px solid rgba(255,255,255,0.1);
+	border-radius: 6px;
+	padding: 0.5rem;
+	color: #999;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.modal-share-btn:hover {
+	background: rgba(74, 144, 226, 0.1);
+	border-color: rgba(74, 144, 226, 0.3);
+	color: #4A90E2;
+	transform: translateY(-1px);
+}
+
+.modal-share-btn:active {
+	transform: translateY(0);
+}

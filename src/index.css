@@ -1,0 +1,103 @@
+/* ========================================
+   COMPREHENSIVE GLOBAL STYLESHEET
+   Professional Standards Implementation
+   ======================================== */
+
+/* FONT CONFIGURATION */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/* BASE SIZING & BOX MODEL */
+html {
+	font-size: 16px; /* Base rem unit calculation */
+	box-sizing: border-box;
+	scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+/* CSS RESET & GLOBAL TYPOGRAPHY */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+	font-size: 1rem; /* 16px base */
+	line-height: 1.5; /* Optimal readability */
+	color: #333; /* Muted grey for body text */
+	background-color: #FFFFFF; /* Pure white background */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+/* TYPOGRAPHY ENHANCEMENTS */
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+	line-height: 1.2;
+	color: #000000; /* Black for headings */
+	margin-bottom: 1rem;
+}
+
+p {
+	margin-bottom: 1rem;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+a:hover {
+	color: #4A90E2;
+}
+
+/* RESPONSIVE IMAGES */
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* SIGNATURE CUSTOM SCROLLBAR */
+/* For Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+}
+
+::-webkit-scrollbar-track {
+	background: #1A1A1A;
+	border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #4A4A4A;
+	border-radius: 9999px;
+	transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #5A5A5A; /* Slightly lighter contrast for visibility */
+}
+
+/* For Firefox */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: #4A4A4A #1A1A1A;
+}
+
+
+
+/* ACCESSIBILITY ENHANCEMENTS */
+:focus-visible {
+	outline: 2px solid #4A90E2;
+	outline-offset: 2px;
+}
+
+
+
